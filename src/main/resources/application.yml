@@ -3,7 +3,7 @@
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 spring:
   application:
-    name: yuoj-backend-master
+    name: yuoj-backend
   # 默认 dev 环境
   profiles:
     active: dev
@@ -14,7 +14,7 @@ spring:
   # session 配置
   session:
     # todo 取消注释开启分布式 session（须先配置 Redis）
-    # store-type: redis
+    store-type: redis
     # 30 天过期
     timeout: 2592000
   # 数据库配置
@@ -90,14 +90,6 @@ cos:
     secretKey: xxx
     region: xxx
     bucket: xxx
-# 接口文档配置
-knife4j:
-  enable: true
-  openapi:
-    title: "接口文档"
-    version: 1.0
-    group:
-      default:
-        api-rule: package
-        api-rule-resources:
-          - com.yupi.yuoj.controller
+# 代码沙箱配置
+codesandbox:
+  type: remote
